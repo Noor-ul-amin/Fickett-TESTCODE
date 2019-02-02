@@ -35,7 +35,6 @@ def findPositionProbability(position_x, base):
         code_prob = coding_probs[9]
     return code_prob
 
-
 def readfile(filename):
     f = open(filename)
     sl = list(SeqIO.parse(f, 'fasta'))
@@ -48,8 +47,6 @@ def readfile(filename):
         seqs.append(seq.upper())
 
     return ids, seqs
-
-
 
 def findContentProbability(position_x, base):
     coding_probs = []
@@ -85,9 +82,7 @@ def findContentProbability(position_x, base):
         code_prob = coding_probs[9]
     return code_prob
 
-
 def ficketTestcode(seq):
-
     baseOne = [0, 0, 0, 0]
     baseTwo = [0, 0, 0, 0]
     baseThree = [0, 0, 0, 0]
@@ -146,9 +141,6 @@ def ficketTestcode(seq):
     content_T_prob = findContentProbability(content_T, "T")
     ficket_score = position_A_prob * .26 + content_A_prob * .11 + position_C_prob * .18 + content_C_prob * .12 + position_G_prob * .31 + content_G_prob * .15 + position_T_prob * .33 + content_T_prob * .14
     return ficket_score
-
-
-
 
 if __name__ == '__main__':
 
