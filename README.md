@@ -2,6 +2,7 @@
 The script calculates Fickett TESTCODE (Fickett Score) of given single stranded RNA.
 # Requirements
 The script requires Biopython to read fasta file.
+
 To install Biopython from pip
 ```
 pip install biopython
