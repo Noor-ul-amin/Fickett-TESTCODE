@@ -1,6 +1,7 @@
 from Bio import SeqIO
 
 def findPositionProbability(position_x, base):
+    '''Calculate the Position probablity of a base in codon'''
     coding_probs = []
     codeProb = 0
     if (base == "A"):
@@ -49,6 +50,7 @@ def readfile(filename):
     return ids, seqs
 
 def findContentProbability(position_x, base):
+    ''' Find the composition probablity of base in codon '''
     coding_probs = []
     codeProb = 0
     if (base == "A"):
@@ -83,6 +85,7 @@ def findContentProbability(position_x, base):
     return code_prob
 
 def ficketTestcode(seq):
+    ''' The driver function '''
     baseOne = [0, 0, 0, 0]
     baseTwo = [0, 0, 0, 0]
     baseThree = [0, 0, 0, 0]
@@ -143,7 +146,7 @@ def ficketTestcode(seq):
     return ficket_score
 
 if __name__ == '__main__':
-
+    '''gives the verdict'''
     ids, seqs = readfile("test.fasta")
     for id, seq in zip (ids, seqs ):
         ficket_score = ficketTestcode(seq)
