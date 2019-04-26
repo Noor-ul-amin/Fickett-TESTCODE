@@ -13,7 +13,7 @@ conda install -c anaconda biopython
 ```
 
 # Protein-coding and non-coding Decision 
-Testcode ≤ 0.74 then the Prediction is that the sequence is NONCODING. 
+Testcode ≤ 0.74 then the Prediction is NONCODING. 
 Testcode 0.74 ≥ and ≤ 0.95 then the Prediction is NO OPINION.
 Testcode ≥ 0.95 then the Prediction is CODING.
 
